@@ -1,17 +1,27 @@
 import styled from "styled-components";
 
 export const SectionWrapper = styled.div`
-	display: flex;
-	justify-content: start;
-	align-items: flex-start;
-	padding: 40px;
 	max-width: 1077px;
 	width: 100%;
 	margin: 0 auto;
+	padding: 0 10px;
+`;
+
+export const InnerContent = styled.div`
+	display: flex;
+	gap: 40px;
+	padding: 64px;
 	border-radius: 24px;
 	background-color: #fff;
-	padding: 64px;
-	gap: 40px;
+
+	@media (max-width: 768px) {
+		padding: 64px 32px;
+		gap: 16px;
+	}
+
+	@media (max-width: 768px) {
+		flex-direction: column;
+	}
 `;
 
 export const LeftSide = styled.div`
@@ -19,6 +29,11 @@ export const LeftSide = styled.div`
 	flex-direction: column;
 	gap: 16px;
 	max-width: 300px;
+
+	@media (max-width: 768px) {
+		flex-direction: column;
+		gap: 16px;
+	}
 `;
 
 export const LeftTitle = styled.h2`

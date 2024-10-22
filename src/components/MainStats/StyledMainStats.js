@@ -4,13 +4,14 @@ import backgroundImage from "../../assets/images/m.png";
 export const Wrapper = styled.div`
 	padding-top: 144px;
 	position: relative;
+	padding: 144px 10px 0;
 
 	@media (max-width: 768px) {
-		padding-top: 90px;
+		padding: 90px 16px 0;
 	}
 
 	@media (max-width: 580px) {
-		padding-top: 64px;
+		padding: 64px 16px 0;
 	}
 `;
 
@@ -37,7 +38,6 @@ export const BackgroundWrapper = styled.div`
 export const InnerContent = styled.div`
 	position: relative;
 	z-index: 2;
-	padding: 10px;
 
 	@media (max-width: 768px) {
 		padding-top: 16px;

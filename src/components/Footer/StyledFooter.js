@@ -80,7 +80,7 @@ export const SocialLinks = styled.div`
 export const SocialLink = styled.a`
 	color: #fff;
 	text-decoration: none;
-	font-size: 18px;
+	font-size: 16px;
 	transition: background-color 0.3s;
 	cursor: pointer;
 	background-color: #5b6c84;

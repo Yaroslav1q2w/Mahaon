@@ -1,8 +1,13 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-	margin-top: 80px;
+	margin: 80px 0;
 	padding: 0 10px;
+
+	@media (max-width: 768px) {
+		margin: 40px 0;
+		padding: 0 16px;
+	}
 `;
 
 export const HeaderCompany = styled.div`
@@ -20,11 +25,19 @@ export const Title = styled.h4`
 	.color {
 		color: #006dff;
 	}
+
+	@media (max-width: 768px) {
+		font-size: 28px;
+	}
 `;
 
 export const Text = styled.p`
 	font-size: 18px;
 	color: gray;
+
+	@media (max-width: 768px) {
+		font-size: 16px;
+	}
 `;
 
 export const SliderButtons = styled.div`
@@ -47,13 +60,18 @@ export const NavButton = styled.button`
 	&:hover {
 		background-color: #006dff;
 	}
+
+	@media (max-width: 768px) {
+		width: 40px;
+		height: 40px;
+	}
 `;
 
 export const CompanySlider = styled.div`
 	display: flex;
 	position: relative;
 	overflow: hidden;
-	margin: 32px 0 80px;
+	margin-top: 32px;
 `;
 
 export const Card = styled.div`
@@ -72,11 +90,21 @@ export const Card = styled.div`
 	}
 
 	&:not(:last-child) {
-		padding-right: 100px;
+		padding-right: 116px;
 	}
 
 	&.active {
 		width: 700px;
+	}
+
+	@media (max-width: 768px) {
+		width: 200px;
+
+		&.active {
+			max-width: 500px;
+			width: 100%;
+			padding-right: 150px;
+		}
 	}
 `;
 
@@ -107,6 +135,13 @@ export const CardContent = styled.div`
 			background-color: gray;
 			white-space: nowrap;
 			border-radius: 30px;
+
+			@media (max-width: 768px) {
+				white-space: wrap;
+				border-radius: 12px;
+				padding: 8px 10px;
+				font-size: 14px;
+			}
 		}
 	}
 `;

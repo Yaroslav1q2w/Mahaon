@@ -1,3 +1,4 @@
+import { createContext, useRef } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./store/store";
@@ -12,22 +13,28 @@ import {
 	GlobalStyles,
 } from "./StyledApp";
 
+export const RefsContext = createContext(null);
+
 const App = () => {
+	const servicesRef = useRef(null);
+	const casesRef = useRef(null);
+
 	return (
 		<Provider store={store}>
-			<BrowserRouter>
-				<MainWrapper>
-					<GlobalStyles />
-
-					<ContentInner>
-						<Header />
-						<ContentWrapper>
-							<RootRouter />
-						</ContentWrapper>
-						<Footer />
-					</ContentInner>
-				</MainWrapper>
-			</BrowserRouter>
+			<RefsContext.Provider value={{ servicesRef, casesRef }}>
+				<BrowserRouter>
+					<MainWrapper>
+						<GlobalStyles />
+						<ContentInner>
+							<Header />
+							<ContentWrapper>
+								<RootRouter />
+							</ContentWrapper>
+							<Footer />
+						</ContentInner>
+					</MainWrapper>
+				</BrowserRouter>
+			</RefsContext.Provider>
 		</Provider>
 	);
 };

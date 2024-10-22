@@ -1,4 +1,4 @@
-import React from "react";
+import { forwardRef } from "react";
 import {
 	ServicesWrapper,
 	TitleWrapper,
@@ -24,9 +24,9 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
-const Services = () => {
+const Services = forwardRef((props, ref) => {
 	return (
-		<ServicesWrapper>
+		<ServicesWrapper ref={ref}>
 			<TitleWrapper>
 				<Title>Послуги</Title>
 				<SliderButtons>
@@ -45,7 +45,17 @@ const Services = () => {
 					nextEl: ".swiper-button-next",
 				}}
 				spaceBetween={30}
-				slidesPerView={3}>
+				breakpoints={{
+					320: {
+						slidesPerView: 1,
+					},
+					768: {
+						slidesPerView: 2,
+					},
+					1024: {
+						slidesPerView: 3,
+					},
+				}}>
 				<SwiperSlide>
 					<ServiceItem>
 						<Icon>
@@ -118,6 +128,6 @@ const Services = () => {
 			</Slider>
 		</ServicesWrapper>
 	);
-};
+});
 
 export default Services;

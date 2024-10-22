@@ -5,6 +5,10 @@ import { Swiper } from "swiper/react";
 
 export const ServicesWrapper = styled.div`
 	padding: 0 10px;
+
+	@media (max-width: 768px) {
+		padding: 0 16px;
+	}
 `;
 
 export const TitleWrapper = styled.div`

@@ -1,3 +1,4 @@
+import { forwardRef } from "react";
 import {
 	CasesWrapper,
 	ImageItem,
@@ -7,7 +8,6 @@ import {
 	GridItem,
 	TitleContent,
 	TextContent,
-	HeaderContent,
 	FooterContent,
 	FooterItem,
 	FooterText,
@@ -20,9 +20,10 @@ import {
 	MoreCasesText,
 } from "./StyledCases";
 import { ReactComponent as ArrowRight } from "../../assets/images/arrow-right.svg";
+import { Link } from "react-router-dom";
 
-const Cases = () => (
-	<CasesWrapper>
+const Cases = forwardRef((props, ref) => (
+	<CasesWrapper ref={ref}>
 		<TitleWrapper>
 			<Title>Кейси</Title>
 			<MoreCasesWrapper>
@@ -32,12 +33,12 @@ const Cases = () => (
 		</TitleWrapper>
 
 		<CasesGrids>
-			<ImageItem style={{ gridColumn: "span 2" }}>
+			<ImageItem className="span-2">
 				<ItemContent>
-					<HeaderContent>
+					<div>
 						<TitleContent>Starjob</TitleContent>
 						<TextContent>Мережа каналів для пошуку роботи</TextContent>
-					</HeaderContent>
+					</div>
 					<FooterContent>
 						<FooterItem>
 							<FooterText>Підписників</FooterText>
@@ -47,7 +48,7 @@ const Cases = () => (
 							<FooterText>Бюджет</FooterText>
 							<FooterNumber>1 250 000₴</FooterNumber>
 						</FooterItem>
-						<FooterItem>
+						<FooterItem className="additional-text">
 							<FooterText>Термін виконання</FooterText>
 							<FooterNumber>2 місяці</FooterNumber>
 						</FooterItem>
@@ -56,10 +57,10 @@ const Cases = () => (
 			</ImageItem>
 			<ImageItem>
 				<ItemContent>
-					<HeaderContent>
+					<div>
 						<TitleContent>Starjob</TitleContent>
 						<TextContent>Мережа каналів для пошуку роботи</TextContent>
-					</HeaderContent>
+					</div>
 					<FooterContent>
 						<FooterItem>
 							<FooterText>Підписників</FooterText>
@@ -75,10 +76,10 @@ const Cases = () => (
 
 			<ImageItem>
 				<ItemContent>
-					<HeaderContent>
+					<div>
 						<TitleContent>Starjob</TitleContent>
 						<TextContent>Мережа каналів для пошуку роботи</TextContent>
-					</HeaderContent>
+					</div>
 					<FooterContent>
 						<FooterItem>
 							<FooterText>Підписників</FooterText>
@@ -91,17 +92,19 @@ const Cases = () => (
 					</FooterContent>
 				</ItemContent>
 			</ImageItem>
-			<GridItem style={{ gridColumn: "span 1" }}>
+			<GridItem>
 				<GridTitle>Тут буде твій проект</GridTitle>
-				<GridText>Тут буде твій проект</GridText>{" "}
-				<MenuButton>Заповнити бриф</MenuButton>
+				<GridText>Тут буде твій проект</GridText>
+				<MenuButton as={Link} to="/brief/step-1">
+					Заповнити бриф
+				</MenuButton>
 			</GridItem>
 			<ImageItem>
 				<ItemContent>
-					<HeaderContent>
+					<div>
 						<TitleContent>Starjob</TitleContent>
 						<TextContent>Мережа каналів для пошуку роботи</TextContent>
-					</HeaderContent>
+					</div>
 					<FooterContent>
 						<FooterItem>
 							<FooterText>Підписників</FooterText>
@@ -117,10 +120,10 @@ const Cases = () => (
 
 			<ImageItem>
 				<ItemContent>
-					<HeaderContent>
+					<div>
 						<TitleContent>Starjob</TitleContent>
 						<TextContent>Мережа каналів для пошуку роботи</TextContent>
-					</HeaderContent>
+					</div>
 					<FooterContent>
 						<FooterItem>
 							<FooterText>Підписників</FooterText>
@@ -133,12 +136,12 @@ const Cases = () => (
 					</FooterContent>
 				</ItemContent>
 			</ImageItem>
-			<ImageItem style={{ gridColumn: "span 2" }}>
+			<ImageItem className="span-2">
 				<ItemContent>
-					<HeaderContent>
+					<div>
 						<TitleContent>Starjob</TitleContent>
 						<TextContent>Мережа каналів для пошуку роботи</TextContent>
-					</HeaderContent>
+					</div>
 					<FooterContent>
 						<FooterItem>
 							<FooterText>Підписників</FooterText>
@@ -148,7 +151,7 @@ const Cases = () => (
 							<FooterText>Бюджет</FooterText>
 							<FooterNumber>1 250 000₴</FooterNumber>
 						</FooterItem>
-						<FooterItem>
+						<FooterItem className="additional-text">
 							<FooterText>Термін виконання</FooterText>
 							<FooterNumber>2 місяці</FooterNumber>
 						</FooterItem>
@@ -157,6 +160,6 @@ const Cases = () => (
 			</ImageItem>
 		</CasesGrids>
 	</CasesWrapper>
-);
+));
 
 export default Cases;

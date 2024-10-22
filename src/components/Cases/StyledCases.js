@@ -3,6 +3,10 @@ import backgroundImage from "../../assets/images/img.jpg";
 
 export const CasesWrapper = styled.div`
 	padding: 80px 10px 0;
+
+	@media (max-width: 768px) {
+		padding: 80px 16px 0;
+	}
 `;
 
 export const TitleWrapper = styled.div`
@@ -47,7 +51,7 @@ export const CasesGrids = styled.div`
 	grid-template-columns: repeat(3, 1fr);
 	gap: 24px;
 
-	@media (max-width: 768px) {
+	@media (max-width: 1024px) {
 		grid-template-columns: 1fr;
 	}
 `;
@@ -80,6 +84,14 @@ export const ImageItem = styled.div`
 		opacity: 0;
 		transition: opacity 0.3s ease-in-out;
 	}
+
+	&.span-2 {
+		grid-column: span 2;
+
+		@media (max-width: 1024px) {
+			grid-column: span 1;
+		}
+	}
 `;
 
 export const GridItem = styled.div`
@@ -87,11 +99,13 @@ export const GridItem = styled.div`
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	height: 350px;
 `;
 
 export const GridTitle = styled.h4`
 	font-size: 32px;
 	font-weight: 700;
+	text-align: center;
 	color: #fff;
 `;
 
@@ -112,6 +126,7 @@ export const MenuButton = styled.button`
 	border-radius: 8px;
 	cursor: pointer;
 	margin-top: 32px;
+	text-decoration: none;
 
 	&:hover {
 		background-color: #0061e3;
@@ -136,8 +151,6 @@ export const ItemContent = styled.div`
 	}
 `;
 
-export const HeaderContent = styled.div``;
-
 export const TitleContent = styled.h4`
 	font-size: 34px;
 	font-weight: 600;
@@ -157,6 +170,12 @@ export const FooterItem = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 4px;
+
+	&.additional-text {
+		@media (max-width: 748px) {
+			display: none;
+		}
+	}
 `;
 
 export const FooterText = styled.p`

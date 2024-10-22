@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const AboutWrapp = styled.div`
 	margin-bottom: 144px;
+	padding: 0 10px;
 `;
 
 export const Title = styled.h3`
@@ -16,6 +17,12 @@ export const AboutItems = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	gap: 10px;
+
+	@media (max-width: 768px) {
+		flex-direction: column;
+		gap: 21px;
+	}
 `;
 
 export const Item = styled.div`

@@ -25,7 +25,7 @@ export const MainWrapper = styled.div`
 `;
 
 export const ContentInner = styled.div`
-	max-width: 1296px;
+	max-width: 1316px;
 	width: 100%;
 `;
 

@@ -6,6 +6,14 @@ export const HeaderWrapper = styled.header`
 	align-items: center;
 	padding: 32px 10px;
 	position: relative;
+
+	@media (max-width: 768px) {
+		padding: 32px 16px;
+	}
+
+	@media (max-width: 540px) {
+		padding: 16px;
+	}
 `;
 
 export const Logo = styled.img`
@@ -26,20 +34,25 @@ export const Menu = styled.div`
 
 	@media (max-width: 768px) {
 		flex-direction: column;
-		align-items: start;
-		position: absolute;
-		top: 80px;
-		right: -100px;
-		transform: ${({ isOpen }) =>
-			isOpen ? "translateX(-100px)" : "translateX(100%)"};
-		background: none;
+		align-items: flex-start;
+		position: fixed;
+		top: 100px;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		background: #1a1a1a;
 		padding: 20px;
 		gap: 32px;
 		z-index: 1000;
+		transform: ${({ $isOpen }) =>
+			$isOpen ? "translateX(0)" : "translateX(100%)"};
+		overflow-y: auto;
+		visibility: ${({ $isOpen }) => ($isOpen ? "visible" : "hidden")};
 	}
 `;
 
 export const MenuItem = styled.a`
+	cursor: pointer;
 	color: #fff;
 	font-size: 16px;
 	text-decoration: none;
@@ -59,6 +72,7 @@ export const MenuButton = styled.button`
 	font-weight: 500;
 	font-size: 16px;
 	transition: background-color 0.3s;
+	text-decoration: none;
 	border-radius: 8px;
 	cursor: pointer;
 
@@ -72,6 +86,6 @@ export const MenuIcon = styled.div`
 	cursor: pointer;
 
 	@media (max-width: 768px) {
-		display: block; /* Показуємо іконку меню на мобільних */
+		display: block;
 	}
 `;
