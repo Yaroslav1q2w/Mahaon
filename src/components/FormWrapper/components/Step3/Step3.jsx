@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { updateStep3 } from "../../../../reducers/form.reducer";
 import { useNavigate } from "react-router-dom";
@@ -65,6 +65,10 @@ const Step3 = () => {
 		window.scrollTo({ top: 0, behavior: "smooth" });
 		navigate("/");
 	};
+
+	useEffect(() => {
+		window.scrollTo({ top: 0, behavior: "smooth" });
+	}, []);
 
 	return (
 		<>
