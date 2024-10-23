@@ -40,7 +40,7 @@ export const Option = styled.div`
 	transition: 0.3s;
 	background-color: ${({ $selected }) =>
 		$selected ? "#006DFF" : "transparent"};
-	color: ${({ $selected }) => ($selected ? "#fff" : "grey")};
+	color: ${({ $selected }) => ($selected ? "#fff" : "595959")};
 
 	&:hover {
 		border-color: #006dff;
@@ -52,7 +52,7 @@ export const TextArea = styled.textarea`
 	padding: 16px;
 	border-radius: 8px;
 	border: 1px solid #595959;
-	font-size: 16px;
+	font-size: 15px;
 	resize: none;
 	outline: none;
 	background: none;

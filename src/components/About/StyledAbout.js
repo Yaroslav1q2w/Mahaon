@@ -1,14 +1,17 @@
 import styled from "styled-components";
 
 export const AboutWrapp = styled.div`
-	margin-bottom: 144px;
-	padding: 0 10px;
+	margin-top: 80px;
+
+	@media (max-width: 768px) {
+		margin-top: 40px;
+	}
 `;
 
 export const Title = styled.h3`
 	font-size: 32px;
 	font-weight: 600;
-	color: grey;
+	color: #595959;
 	line-height: 1;
 `;
 

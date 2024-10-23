@@ -2,16 +2,15 @@ import styled from "styled-components";
 import backgroundImage from "../../assets/images/m.png";
 
 export const Wrapper = styled.div`
-	padding-top: 144px;
 	position: relative;
-	padding: 144px 10px 0;
+	padding-top: 144px;
 
 	@media (max-width: 768px) {
-		padding: 90px 16px 0;
+		padding-top: 90px;
 	}
 
 	@media (max-width: 580px) {
-		padding: 64px 16px 0;
+		padding-top: 64px;
 	}
 `;
 
@@ -70,8 +69,7 @@ export const Text = styled.p`
 	padding-bottom: 128px;
 
 	@media (max-width: 768px) {
-		padding-bottom: 64px;
-		font-size: 16px;
+		font-size: 14px;
 		line-height: 20px;
 	}
 `;
@@ -83,7 +81,6 @@ export const StatsWrapper = styled.div`
 	background-color: rgba(65, 65, 65, 0.5);
 	border-radius: 24px;
 	backdrop-filter: blur(6px);
-	margin-bottom: 164px;
 
 	@media (max-width: 768px) {
 		flex-direction: column;
@@ -103,7 +100,7 @@ export const StatItem = styled.div`
 `;
 
 export const ItemText = styled.p`
-	color: grey;
+	color: #8a8a8a;
 	font-size: 16px;
 `;
 

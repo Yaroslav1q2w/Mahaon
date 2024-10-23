@@ -2,10 +2,10 @@ import styled from "styled-components";
 import backgroundImage from "../../assets/images/img.jpg";
 
 export const CasesWrapper = styled.div`
-	padding: 80px 10px 0;
+	margin-top: 80px;
 
 	@media (max-width: 768px) {
-		padding: 80px 16px 0;
+		margin-top: 40px;
 	}
 `;
 
@@ -43,7 +43,7 @@ export const MoreCasesText = styled.p`
 export const Title = styled.h2`
 	font-size: 32px;
 	font-weight: 600;
-	color: grey;
+	color: #595959;
 `;
 
 export const CasesGrids = styled.div`
@@ -110,14 +110,14 @@ export const GridTitle = styled.h4`
 `;
 
 export const GridText = styled.p`
-	color: grey;
+	color: #595959;
 	font-size: 24px;
-	padding-top: 6px;
+	padding-top: 16px;
 `;
 
 export const MenuButton = styled.button`
 	padding: 10px 16px;
-	background-color: #007bff;
+	background-color: #006dff;
 	color: #fff;
 	border: none;
 	font-weight: 500;

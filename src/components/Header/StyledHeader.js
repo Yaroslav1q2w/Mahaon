@@ -4,15 +4,11 @@ export const HeaderWrapper = styled.header`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 32px 10px;
+	padding: 32.68px 0;
 	position: relative;
 
-	@media (max-width: 768px) {
-		padding: 32px 16px;
-	}
-
 	@media (max-width: 540px) {
-		padding: 16px;
+		padding: 16px 0;
 	}
 `;
 
@@ -60,13 +56,13 @@ export const MenuItem = styled.a`
 	transition: color 0.3s;
 
 	&:hover {
-		color: #007bff;
+		color: #006dff;
 	}
 `;
 
 export const MenuButton = styled.button`
 	padding: 10px 16px;
-	background-color: #007bff;
+	background-color: #006dff;
 	color: #fff;
 	border: none;
 	font-weight: 500;

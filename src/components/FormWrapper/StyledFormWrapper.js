@@ -2,15 +2,10 @@ import styled from "styled-components";
 
 export const BriefWrapper = styled.div`
 	margin-top: 64px;
-	padding: 0 10px;
-
-	@media (max-width: 768px) {
-		padding: 0 16px;
-	}
 `;
 
 export const StepTitle = styled.h2`
-	font-size: 54px;
+	font-size: 64px;
 	color: #fff;
 	margin-bottom: 8px;
 	font-weight: 700;

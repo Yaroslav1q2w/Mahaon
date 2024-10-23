@@ -1,12 +1,10 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-	margin: 80px 0;
-	padding: 0 10px;
+	margin-top: 80px;
 
 	@media (max-width: 768px) {
-		margin: 40px 0;
-		padding: 0 16px;
+		margin-top: 40px;
 	}
 `;
 
@@ -19,24 +17,20 @@ export const HeaderCompany = styled.div`
 export const Title = styled.h4`
 	font-size: 32px;
 	font-weight: 600;
-	color: gray;
+	color: #595959;
 	padding-bottom: 8px;
 
 	.color {
 		color: #006dff;
 	}
-
-	@media (max-width: 768px) {
-		font-size: 28px;
-	}
 `;
 
 export const Text = styled.p`
-	font-size: 18px;
-	color: gray;
+	font-size: 16px;
+	color: #595959;
 
 	@media (max-width: 768px) {
-		font-size: 16px;
+		font-size: 14px;
 	}
 `;
 
@@ -49,7 +43,7 @@ export const NavButton = styled.button`
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
-	background-color: grey;
+	background-color: #595959;
 	border: none;
 	cursor: pointer;
 	display: flex;
@@ -115,7 +109,7 @@ export const CardTitle = styled.h3`
 `;
 
 export const CardContent = styled.div`
-	color: white;
+	color: #fff;
 	margin-top: 16px;
 	p {
 		margin-bottom: 32px;
@@ -132,7 +126,7 @@ export const CardContent = styled.div`
 			margin-bottom: 8px;
 			padding: 12px 16px;
 			color: #fff;
-			background-color: gray;
+			background-color: #595959;
 			white-space: nowrap;
 			border-radius: 30px;
 

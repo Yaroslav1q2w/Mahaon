@@ -25,13 +25,13 @@ const App = () => {
 				<BrowserRouter>
 					<MainWrapper>
 						<GlobalStyles />
-						<ContentInner>
-							<Header />
-							<ContentWrapper>
+						<ContentWrapper>
+							<ContentInner>
+								<Header />
 								<RootRouter />
-							</ContentWrapper>
-							<Footer />
-						</ContentInner>
+								<Footer />
+							</ContentInner>
+						</ContentWrapper>
 					</MainWrapper>
 				</BrowserRouter>
 			</RefsContext.Provider>

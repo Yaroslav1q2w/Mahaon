@@ -40,14 +40,14 @@ export const Option = styled.div`
 	transition: 0.3s;
 	background-color: ${({ $selected }) =>
 		$selected ? "#006DFF" : "transparent"};
-	color: ${({ $selected }) => ($selected ? "#fff" : "grey")};
+	color: ${({ $selected }) => ($selected ? "#fff" : "595959")};
 
 	&:hover {
 		border-color: #006dff;
 	}
 `;
 
-export const Button = styled.button` 
+export const Button = styled.button`
 	background-color: #006dff;
 	border-radius: 100px;
 	font-size: 16px;

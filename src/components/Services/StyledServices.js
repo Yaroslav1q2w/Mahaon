@@ -4,10 +4,10 @@ import "swiper/css/pagination";
 import { Swiper } from "swiper/react";
 
 export const ServicesWrapper = styled.div`
-	padding: 0 10px;
+	margin-top: 164px;
 
 	@media (max-width: 768px) {
-		padding: 0 16px;
+		margin-top: 64px;
 	}
 `;
 
@@ -20,7 +20,7 @@ export const TitleWrapper = styled.div`
 export const Title = styled.h2`
 	font-size: 32px;
 	letter-spacing: 1px;
-	color: grey;
+	color: #595959;
 	font-weight: 600;
 `;
 
@@ -50,11 +50,16 @@ export const NavButton = styled.button`
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
-	background-color: grey;
+	background-color: #595959;
 	border: none;
 	cursor: pointer;
 	position: relative;
 	transition: background-color 0.3s;
+
+	@media (max-width: 768px) {
+		width: 40px;
+		height: 40px;
+	}
 
 	&.swiper-button-prev {
 		transform: rotate(180deg);
@@ -98,7 +103,7 @@ export const ServiceTitle = styled.h3`
 
 export const ServiceText = styled.p`
 	font-size: 14px;
-	color: #666;
+	color: #8a8a8a;
 	text-align: start;
 	padding-top: 8px;
 	font-weight: 400;

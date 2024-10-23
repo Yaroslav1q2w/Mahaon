@@ -4,7 +4,6 @@ export const SectionWrapper = styled.div`
 	max-width: 1077px;
 	width: 100%;
 	margin: 0 auto;
-	padding: 0 10px;
 `;
 
 export const InnerContent = styled.div`
@@ -13,10 +12,12 @@ export const InnerContent = styled.div`
 	padding: 64px;
 	border-radius: 24px;
 	background-color: #fff;
+	margin-top: 144px;
 
 	@media (max-width: 768px) {
 		padding: 64px 32px;
 		gap: 16px;
+		margin-top: 104px;
 	}
 
 	@media (max-width: 768px) {
@@ -44,7 +45,7 @@ export const LeftTitle = styled.h2`
 
 export const Subtitle = styled.p`
 	font-size: 18px;
-	color: grey;
+	color: #595959;
 `;
 
 export const RightSide = styled.div`
@@ -67,7 +68,7 @@ export const Info = styled.div`
 export const Title = styled.h3`
 	font-size: 22px;
 	font-weight: 500;
-	color: grey;
+	color: #595959;
 	padding-bottom: 8px;
 `;
 

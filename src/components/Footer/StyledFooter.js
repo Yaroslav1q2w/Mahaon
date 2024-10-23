@@ -2,14 +2,10 @@ import styled from "styled-components";
 
 export const FooterWrapper = styled.footer`
 	color: #fff;
-	padding: 0 10px;
 	display: flex;
 	flex-direction: column;
-	margin: 144px 0 50px;
-
-	@media (max-width: 768px) {
-		padding: 0 16px;
-	}
+	margin-top: 144px;
+	padding-bottom: 40px;
 `;
 
 export const FooterInner = styled.div`
@@ -19,8 +15,6 @@ export const FooterInner = styled.div`
 export const FooterContainer = styled.div`
 	display: flex;
 	justify-content: space-between;
-	width: 100%;
-	max-width: 1200px;
 	align-items: flex-start;
 	margin-bottom: 40px;
 

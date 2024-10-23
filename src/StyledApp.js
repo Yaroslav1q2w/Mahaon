@@ -16,19 +16,16 @@ export const GlobalStyles = createGlobalStyle`
 `;
 
 export const MainWrapper = styled.div`
-	display: flex;
-	align-items: center;
-	flex-direction: column;
 	min-height: 100vh;
 	background-color: #1a1a1a;
-	margin: 0 auto;
-`;
-
-export const ContentInner = styled.div`
-	max-width: 1316px;
-	width: 100%;
 `;
 
 export const ContentWrapper = styled.div`
-	flex-grow: 1;
+	padding: 0 16px;
+	width: 100%;
+`;
+
+export const ContentInner = styled.div`
+	max-width: 1296px;
+	margin: 0 auto;
 `;
