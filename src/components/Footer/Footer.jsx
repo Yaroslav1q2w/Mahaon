@@ -53,16 +53,16 @@ const Footer = () => {
 
 					<SocialLinks>
 						<SocialLink target="_blank" href="https://web.telegram.org/a/">
-							Telegram
+							telegram
 						</SocialLink>
 						<SocialLink target="_blank" href="https://www.linkedin.com/feed/">
-							LinkedIn
+							linkedIn
 						</SocialLink>
 						<SocialLink target="_blank" href="https://www.facebook.com/">
-							Facebook
+							facebook
 						</SocialLink>
 						<SocialLink target="_blank" href="https://www.instagram.com/">
-							Instagram
+							instagram
 						</SocialLink>
 					</SocialLinks>
 				</FooterContainer>

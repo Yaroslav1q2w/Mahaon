@@ -15,8 +15,7 @@ export const FooterInner = styled.div`
 export const FooterContainer = styled.div`
 	display: flex;
 	justify-content: space-between;
-	align-items: flex-start;
-	margin-bottom: 40px;
+	align-items: flex-end;
 
 	@media (max-width: 1022px) {
 		flex-direction: column;
@@ -51,6 +50,7 @@ export const FooterLink = styled.a`
 	transition: color 0.3s;
 	font-weight: 500;
 	cursor: pointer;
+	line-height: 1.25;
 
 	&:hover {
 		color: #007bff;
@@ -63,7 +63,6 @@ export const SocialLinks = styled.div`
 
 	@media (max-width: 768px) {
 		justify-content: center;
-		margin-bottom: 20px;
 		flex-wrap: wrap;
 	}
 
@@ -82,6 +81,7 @@ export const SocialLink = styled.a`
 	padding: 10px 24px;
 	border-radius: 50px;
 	font-weight: 500;
+	line-height: 1.25;
 
 	&:hover {
 		background-color: #006dff;
@@ -94,4 +94,5 @@ export const Copyright = styled.div`
 	color: #595959;
 	margin-top: 32px;
 	text-align: left;
+	line-height: 1;
 `;
