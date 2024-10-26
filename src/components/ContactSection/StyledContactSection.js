@@ -39,13 +39,14 @@ export const LeftSide = styled.div`
 
 export const LeftTitle = styled.h2`
 	font-size: 36px;
-	font-weight: 700;
+	font-weight: 800;
 	color: #000;
 `;
 
 export const Subtitle = styled.p`
 	font-size: 18px;
 	color: #595959;
+	font-weight: 500;
 `;
 
 export const RightSide = styled.div`
@@ -67,14 +68,14 @@ export const Info = styled.div`
 
 export const Title = styled.h3`
 	font-size: 22px;
-	font-weight: 500;
+	font-weight: 600;
 	color: #595959;
 	padding-bottom: 8px;
 `;
 
 export const Link = styled.a`
 	font-size: 24px;
-	font-weight: 500;
+	font-weight: 600;
 	color: #000;
 	text-decoration: none;
 	transition: color 0.3s ease-in-out;

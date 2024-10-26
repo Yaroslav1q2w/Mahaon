@@ -10,7 +10,7 @@ export const AboutWrapp = styled.div`
 
 export const Title = styled.h3`
 	font-size: 32px;
-	font-weight: 600;
+	font-weight: 700;
 	color: #595959;
 	line-height: 1;
 `;
@@ -22,7 +22,15 @@ export const AboutItems = styled.div`
 	align-items: center;
 	gap: 10px;
 
+	@media (max-width: 1024px) {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		place-items: center;
+		gap: 30px;
+	}
+
 	@media (max-width: 768px) {
+		display: flex;
 		flex-direction: column;
 		gap: 21px;
 	}

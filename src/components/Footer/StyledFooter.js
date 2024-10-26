@@ -20,11 +20,8 @@ export const FooterContainer = styled.div`
 	@media (max-width: 1022px) {
 		flex-direction: column;
 		align-items: center;
-		gap: 32px;
-	}
-
-	@media (max-width: 580px) {
 		align-items: start;
+		gap: 32px;
 	}
 `;
 

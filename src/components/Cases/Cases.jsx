@@ -94,7 +94,7 @@ const Cases = forwardRef((props, ref) => (
 			</ImageItem>
 			<GridItem>
 				<GridTitle>Тут буде твій проект</GridTitle>
-				<GridText>Тут буде твій проект</GridText>
+				<GridText>Кожен проект додаємо у кейси</GridText>
 				<MenuButton as={Link} to="/brief/step-1">
 					Заповнити бриф
 				</MenuButton>

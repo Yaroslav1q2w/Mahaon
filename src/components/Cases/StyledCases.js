@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import backgroundImage from "../../assets/images/img.jpg";
+import backgroundImage from "../../assets/images/img.png";
 
 export const CasesWrapper = styled.div`
 	margin-top: 80px;
@@ -44,6 +44,7 @@ export const Title = styled.h2`
 	font-size: 32px;
 	font-weight: 600;
 	color: #595959;
+	font-weight: bold;
 `;
 
 export const CasesGrids = styled.div`
@@ -104,7 +105,7 @@ export const GridItem = styled.div`
 
 export const GridTitle = styled.h4`
 	font-size: 32px;
-	font-weight: 700;
+	font-weight: 800;
 	text-align: center;
 	color: #fff;
 `;
@@ -113,6 +114,8 @@ export const GridText = styled.p`
 	color: #595959;
 	font-size: 24px;
 	padding-top: 16px;
+	font-weight: 500;
+	text-align: center;
 `;
 
 export const MenuButton = styled.button`
@@ -120,7 +123,7 @@ export const MenuButton = styled.button`
 	background-color: #006dff;
 	color: #fff;
 	border: none;
-	font-weight: 500;
+	font-weight: 600;
 	font-size: 16px;
 	transition: background-color 0.3s;
 	border-radius: 8px;
@@ -152,13 +155,14 @@ export const ItemContent = styled.div`
 `;
 
 export const TitleContent = styled.h4`
-	font-size: 34px;
-	font-weight: 600;
+	font-size: 32px;
+	font-weight: 700;
 `;
 
 export const TextContent = styled.p`
 	font-size: 16px;
 	padding-top: 4px;
+	font-weight: 500;
 `;
 
 export const FooterContent = styled.div`
@@ -180,9 +184,10 @@ export const FooterItem = styled.div`
 
 export const FooterText = styled.p`
 	font-size: 16px;
+	font-weight: 500;
 `;
 
 export const FooterNumber = styled.p`
 	font-size: 28px;
-	font-weight: 600;
+	font-weight: 700;
 `;

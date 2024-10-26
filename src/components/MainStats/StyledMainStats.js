@@ -66,6 +66,7 @@ export const Text = styled.p`
 	font-size: 18px;
 	line-height: 21.94px;
 	text-align: left;
+	font-weight: 400;
 	padding-bottom: 128px;
 
 	@media (max-width: 768px) {
@@ -102,10 +103,11 @@ export const StatItem = styled.div`
 export const ItemText = styled.p`
 	color: #8a8a8a;
 	font-size: 16px;
+	font-weight: 600;
 `;
 
 export const ItemNumber = styled.p`
 	color: #fff;
 	font-size: 32px;
-	font-weight: 600;
+	font-weight: 700;
 `;

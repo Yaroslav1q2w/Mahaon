@@ -53,7 +53,7 @@ const Services = forwardRef((props, ref) => {
 						slidesPerView: 2,
 					},
 					1024: {
-						slidesPerView: 3,
+						slidesPerView: 3.2,
 					},
 				}}>
 				<SwiperSlide>

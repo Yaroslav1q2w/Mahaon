@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
 	Wrapper,
 	HeaderCompany,
@@ -74,17 +74,30 @@ const companyData = [
 
 const GroupsСompanies = () => {
 	const [activeIndex, setActiveIndex] = useState(2);
+	const [isContentVisible, setContentVisible] = useState(false);
+
+	useEffect(() => {
+		setContentVisible(true);
+	}, [activeIndex]);
 
 	const handlePrev = () => {
-		setActiveIndex((prevIndex) =>
-			prevIndex === 0 ? companyData.length - 1 : prevIndex - 1
-		);
+		setContentVisible(false);
+		setTimeout(() => {
+			setActiveIndex((prevIndex) =>
+				prevIndex === 0 ? companyData.length - 1 : prevIndex - 1
+			);
+			setContentVisible(true);
+		}, 300);
 	};
 
 	const handleNext = () => {
-		setActiveIndex((prevIndex) =>
-			prevIndex === companyData.length - 1 ? 0 : prevIndex + 1
-		);
+		setContentVisible(false);
+		setTimeout(() => {
+			setActiveIndex((prevIndex) =>
+				prevIndex === companyData.length - 1 ? 0 : prevIndex + 1
+			);
+			setContentVisible(true);
+		}, 300);
 	};
 
 	return (
@@ -113,19 +126,26 @@ const GroupsСompanies = () => {
 					<Card
 						key={index}
 						className={index === activeIndex ? "active" : ""}
-						onClick={() => setActiveIndex(index)}
+						onClick={() => {
+							setContentVisible(false);
+							setTimeout(() => {
+								setActiveIndex(index);
+								setContentVisible(true);
+							}, 300);
+						}}
 						style={{ background: company.background }}>
 						<CardTitle>{company.title}</CardTitle>
-						{index === activeIndex && (
-							<CardContent>
-								<p>{company.description}</p>
-								<ul>
-									{company.stats.map((stat, statIndex) => (
-										<li key={statIndex}>{stat}</li>
-									))}
-								</ul>
-							</CardContent>
-						)}
+						<CardContent
+							className={
+								isContentVisible && index === activeIndex ? "show" : ""
+							}>
+							<p>{company.description}</p>
+							<ul>
+								{company.stats.map((stat, statIndex) => (
+									<li key={statIndex}>{stat}</li>
+								))}
+							</ul>
+						</CardContent>
 					</Card>
 				))}
 			</CompanySlider>

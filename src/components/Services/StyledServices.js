@@ -21,7 +21,7 @@ export const Title = styled.h2`
 	font-size: 32px;
 	letter-spacing: 1px;
 	color: #595959;
-	font-weight: 600;
+	font-weight: 700;
 `;
 
 export const Slider = styled(Swiper)`
@@ -31,7 +31,7 @@ export const Slider = styled(Swiper)`
 export const ServiceItem = styled.div`
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	align-items: start;
 	text-align: center;
 	background-color: #171717;
 	padding: 32px;
@@ -82,14 +82,15 @@ export const NavButton = styled.button`
 export const Icon = styled.div`
 	width: 60px;
 	height: 60px;
+	color: #555555;
 
 	svg {
 		width: 100%;
 		height: 100%;
-		fill: #2c2c2c;
+		transition: color 0.3s ease-in-out;
 
 		&:hover {
-			fill: red;
+			color: #006dff;
 		}
 	}
 `;

@@ -16,7 +16,7 @@ export const HeaderCompany = styled.div`
 
 export const Title = styled.h4`
 	font-size: 32px;
-	font-weight: 600;
+	font-weight: 700;
 	color: #595959;
 	padding-bottom: 8px;
 
@@ -27,6 +27,7 @@ export const Title = styled.h4`
 
 export const Text = styled.p`
 	font-size: 16px;
+	font-weight: 500;
 	color: #595959;
 
 	@media (max-width: 768px) {
@@ -73,7 +74,7 @@ export const Card = styled.div`
 	border-radius: 24px;
 	padding: 32px;
 	width: 306px;
-	min-height: 350px;
+	height: 370px;
 	cursor: pointer;
 	position: relative;
 	transition: transform 0.3s ease-in-out, width 0.3s ease-in-out, z-index 0.3s;
@@ -84,11 +85,27 @@ export const Card = styled.div`
 	}
 
 	&:not(:last-child) {
-		padding-right: 116px;
+		padding-right: 140px;
 	}
 
 	&.active {
 		width: 700px;
+	}
+
+	@media (max-width: 1290px) {
+		height: 450px;
+	}
+
+	@media (max-width: 1020px) {
+		height: 470px;
+	}
+
+	@media (max-width: 800px) {
+		min-height: 500px;
+	}
+
+	@media (max-width: 600px) {
+		min-height: 700px;
 	}
 
 	@media (max-width: 768px) {
@@ -97,7 +114,6 @@ export const Card = styled.div`
 		&.active {
 			max-width: 500px;
 			width: 100%;
-			padding-right: 150px;
 		}
 	}
 `;
@@ -111,9 +127,25 @@ export const CardTitle = styled.h3`
 export const CardContent = styled.div`
 	color: #fff;
 	margin-top: 16px;
+	opacity: 0;
+	max-height: 0;
+	overflow: hidden;
+	visibility: hidden;
+	transition: opacity 1s ease-in-out, max-height 1s ease-in-out,
+		transform 1s ease-in-out;
+
+	&.show {
+		opacity: 1;
+		max-height: 1000px; /* Достатньо велика, щоб вмістити весь контент */
+		visibility: visible;
+	}
+
 	p {
 		margin-bottom: 32px;
+		font-size: 16px;
+		font-weight: 500;
 	}
+
 	ul {
 		list-style-type: none;
 		padding: 0;
@@ -125,6 +157,7 @@ export const CardContent = styled.div`
 			font-size: 16px;
 			margin-bottom: 8px;
 			padding: 12px 16px;
+			font-weight: 500;
 			color: #fff;
 			background-color: #595959;
 			white-space: nowrap;

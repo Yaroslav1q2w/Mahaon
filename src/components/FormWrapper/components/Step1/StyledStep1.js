@@ -34,6 +34,7 @@ export const Label = styled.label`
 
 export const InputText = styled.p`
 	font-size: 16px;
+	font-weight: 500;
 	color: #fff;
 	padding-bottom: 8px;
 
@@ -68,6 +69,7 @@ export const Button = styled.button`
 	background-color: #006dff;
 	border-radius: 100px;
 	font-size: 16px;
+	font-weight: 600;
 	padding: 16px 24px;
 	border: none;
 	color: #fff;

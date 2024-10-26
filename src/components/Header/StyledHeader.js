@@ -52,7 +52,7 @@ export const MenuItem = styled.a`
 	color: #fff;
 	font-size: 16px;
 	text-decoration: none;
-	font-weight: 500;
+	font-weight: 600;
 	transition: color 0.3s;
 
 	&:hover {
@@ -65,7 +65,7 @@ export const MenuButton = styled.button`
 	background-color: #006dff;
 	color: #fff;
 	border: none;
-	font-weight: 500;
+	font-weight: 600;
 	font-size: 16px;
 	transition: background-color 0.3s;
 	text-decoration: none;

@@ -31,6 +31,7 @@ export const PopupContent = styled.div`
 
 export const Title = styled.h2`
 	font-size: 24px;
+	font-weight: 800;
 	color: #333;
 	margin-bottom: 16px;
 `;
@@ -50,6 +51,7 @@ export const CloseButton = styled.button`
 	background-color: #006dff;
 	border-radius: 100px;
 	font-size: 16px;
+	font-weight: 600;
 	padding: 16px 24px;
 	border: none;
 	color: #fff;

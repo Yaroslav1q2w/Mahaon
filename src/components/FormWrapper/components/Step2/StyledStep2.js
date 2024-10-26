@@ -15,7 +15,7 @@ export const QuestionTitle = styled.h3`
 	font-size: 16px;
 	color: #fff;
 	margin-bottom: 16px;
-	font-weight: 500;
+	font-weight: 600;
 `;
 
 export const BlockSelected = styled.div`
@@ -52,6 +52,7 @@ export const Button = styled.button`
 	border-radius: 100px;
 	font-size: 16px;
 	padding: 16px 24px;
+	font-weight: 600;
 	border: none;
 	color: #fff;
 	display: inline-block;
