@@ -16,7 +16,6 @@ export const GlobalStyles = createGlobalStyle`
 `;
 
 export const MainWrapper = styled.div`
-	min-height: 100vh;
 	background-color: #1a1a1a;
 `;
 
@@ -28,4 +27,5 @@ export const ContentWrapper = styled.div`
 export const ContentInner = styled.div`
 	max-width: 1296px;
 	margin: 0 auto;
+	min-height: 100vh;
 `;

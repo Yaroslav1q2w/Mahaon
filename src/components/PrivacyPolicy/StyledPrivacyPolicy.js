@@ -1,20 +1,20 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-	padding: 64px 16px;
+	padding: 64px 0;
 	color: #fff;
 `;
 
 export const Title = styled.div`
 	font-size: 32px;
-	font-weight: 500;
+	font-weight: 600;
 	padding-bottom: 32px;
 `;
 
 export const SubTitle = styled.div`
 	font-size: 24px;
 	padding: 32px 0;
-	font-weight: 500;
+	font-weight: 600;
 `;
 
 export const Text = styled.div`

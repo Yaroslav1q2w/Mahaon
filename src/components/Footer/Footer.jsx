@@ -11,7 +11,7 @@ import {
 	SocialLink,
 	Copyright,
 } from "./StyledFooter";
-import logo from "../../assets/images/logo.png";
+import logo from "../../assets/images/mahaon-logo.svg";
 import { Link } from "react-router-dom";
 import { RefsContext } from "../../App";
 

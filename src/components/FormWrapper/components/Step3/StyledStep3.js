@@ -16,6 +16,12 @@ export const QuestionTitle = styled.h3`
 	color: #fff;
 	margin-bottom: 16px;
 	font-weight: 600;
+
+	&.input-required::after {
+		content: "*";
+		color: #ff0000;
+		padding-left: 6px;
+	}
 `;
 
 export const BlockSelected = styled.div`

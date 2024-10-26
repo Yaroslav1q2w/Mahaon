@@ -28,6 +28,18 @@ export const Slider = styled(Swiper)`
 	margin-top: 32px;
 `;
 
+export const Icon = styled.div`
+	width: 60px;
+	height: 60px;
+	color: #555555;
+
+	svg {
+		width: 100%;
+		height: 100%;
+		transition: color 0.3s ease-in-out;
+	}
+`;
+
 export const ServiceItem = styled.div`
 	display: flex;
 	flex-direction: column;
@@ -39,6 +51,10 @@ export const ServiceItem = styled.div`
 	min-height: 240px;
 	height: 100%;
 	cursor: pointer;
+
+	&:hover ${Icon} {
+		color: #006dff;
+	}
 `;
 
 export const SliderButtons = styled.div`
@@ -76,22 +92,6 @@ export const NavButton = styled.button`
 
 	&:hover {
 		background-color: #006dff;
-	}
-`;
-
-export const Icon = styled.div`
-	width: 60px;
-	height: 60px;
-	color: #555555;
-
-	svg {
-		width: 100%;
-		height: 100%;
-		transition: color 0.3s ease-in-out;
-
-		&:hover {
-			color: #006dff;
-		}
 	}
 `;
 

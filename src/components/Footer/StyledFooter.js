@@ -45,7 +45,7 @@ export const FooterLink = styled.a`
 	text-decoration: none;
 	font-size: 16px;
 	transition: color 0.3s;
-	font-weight: 500;
+	font-weight: 600;
 	cursor: pointer;
 	line-height: 1.25;
 
@@ -77,7 +77,7 @@ export const SocialLink = styled.a`
 	background-color: #5b6c84;
 	padding: 10px 24px;
 	border-radius: 50px;
-	font-weight: 500;
+	font-weight: 600;
 	line-height: 1.25;
 
 	&:hover {

@@ -7,7 +7,7 @@ import {
 	MenuButton,
 	MenuIcon,
 } from "./StyledHeader";
-import logo from "../../assets/images/logo.png";
+import logo from "../../assets/images/mahaon-logo.svg";
 import { ReactComponent as MenuIconSvg } from "../../assets/images/menu.svg";
 import { Link } from "react-router-dom";
 import { RefsContext } from "../../App";
@@ -25,8 +25,6 @@ const Header = () => {
 	};
 
 	const scrollToSection = (ref) => {
-		console.log(ref);
-
 		if (ref && ref.current) {
 			ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
 			closeMenu();

@@ -1,5 +1,7 @@
+// Step3.js
+
 import { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { updateStep3 } from "../../../../reducers/form.reducer";
 import { useNavigate } from "react-router-dom";
 import ThankYouPopup from "../../../Popap";
@@ -39,9 +41,47 @@ const Step3 = () => {
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
 
+	// Отримуємо всі дані з форми із Redux (крім кроку 3)
+	const { step1, step2 } = useSelector((state) => state.form);
+
 	const selectSingleOption = (item, setFunction) => {
 		setFunction(item);
 		setError("");
+	};
+
+	const sendToTelegram = async (data) => {
+		const botToken = "5827502401:AAHQFwcLxATz8Jf3LbnA61O2xrdnNhR3_Wc";
+		const chatId = -1001714383654;
+		const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
+
+		const text = `
+<b>Ім’я:</b> ${data.name}
+<b>Контакт:</b> ${data.contact}
+<b>Назва компанії:</b> ${data.company}
+<b>Сайт/Соц. мережі:</b> ${data.website}
+<b>Обрані послуги:</b> ${data.services.join(", ")}
+<b>Цілі:</b> ${data.goals.join(", ")}
+<b>Цільова аудиторія:</b> ${data.audience}
+<b>Термін реалізації:</b> ${data.duration}
+<b>Бюджет:</b> ${data.budget}
+<b>Додаткова інформація:</b> ${data.additionalInfo}
+`.replace(/^\s+/gm, "");
+
+		try {
+			await fetch(url, {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify({
+					chat_id: chatId,
+					text: text,
+					parse_mode: "HTML",
+				}),
+			});
+		} catch (error) {
+			console.error("Error sending message to Telegram:", error);
+		}
 	};
 
 	const onSubmit = () => {
@@ -50,6 +90,7 @@ const Step3 = () => {
 			return;
 		}
 
+		// Оновлюємо дані в Redux для кроку 3
 		dispatch(
 			updateStep3({
 				duration: selectedDeadline,
@@ -57,7 +98,25 @@ const Step3 = () => {
 				additionalInfo,
 			})
 		);
+
+		// Формуємо об'єкт для відправки
+		const updatedFormData = {
+			name: step1.name,
+			contact: step1.contact,
+			company: step1.company,
+			website: step1.website,
+			services: step2.services,
+			goals: step2.goals,
+			audience: step2.audience,
+			duration: selectedDeadline,
+			budget: selectedBudget,
+			additionalInfo,
+		};
+
 		setShowPopup(true);
+
+		// Відправка даних до Telegram
+		sendToTelegram(updatedFormData);
 	};
 
 	const closePopup = () => {
@@ -89,7 +148,7 @@ const Step3 = () => {
 			</BlockSelected>
 
 			<BlockSelected>
-				<QuestionTitle>Бюджет проекту *</QuestionTitle>
+				<QuestionTitle className="input-required">Бюджет проекту</QuestionTitle>
 				<OptionsContainer>
 					{budgetOptions.map((budget) => (
 						<Option

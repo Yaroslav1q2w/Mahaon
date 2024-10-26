@@ -9,11 +9,12 @@ import {
 
 const Popup = ({ onClose }) => {
 	const formData = useSelector((state) => state.form);
+	console.log(formData);
 
 	return (
 		<PopupWrapper>
 			<PopupContent>
-				<Title>Дякуємо за заповнення брифу!</Title>
+				<Title>Дякуємо, ваші дані відправлені!</Title>
 				<InfoText>
 					<strong>Ім’я:</strong> {formData.step1.name}
 				</InfoText>
