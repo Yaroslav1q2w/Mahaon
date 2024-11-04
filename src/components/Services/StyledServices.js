@@ -43,7 +43,7 @@ export const Icon = styled.div`
 export const ServiceItem = styled.div`
 	display: flex;
 	flex-direction: column;
-	align-items: start;
+	align-items: center;
 	text-align: center;
 	background-color: #171717;
 	padding: 32px;

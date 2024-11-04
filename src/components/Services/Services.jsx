@@ -44,6 +44,7 @@ const Services = forwardRef((props, ref) => {
 					prevEl: ".swiper-button-prev",
 					nextEl: ".swiper-button-next",
 				}}
+        loop={true}
 				spaceBetween={30}
 				breakpoints={{
 					320: {
@@ -53,7 +54,7 @@ const Services = forwardRef((props, ref) => {
 						slidesPerView: 2,
 					},
 					1024: {
-						slidesPerView: 3.2,
+						slidesPerView: 3,
 					},
 				}}>
 				<SwiperSlide>
